@@ -9,15 +9,14 @@
 /*   Updated: 2024/02/12 13:50:07 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
-	int	n;
-
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
@@ -25,3 +24,22 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+int		main(void)
+{
+	char	src[] = "Hello, world!";
+	char	dest[50];
+
+	ft_strcpy(dest, src);
+	
+	int i;
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		write(1, &dest[i], 1);
+		i++;
+	}
+
+	return (0);
+}
+*/
