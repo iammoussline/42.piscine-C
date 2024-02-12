@@ -36,6 +36,3 @@ int	ft_str_is_alpha(char *str)
 	if(!(str[i] >=i 'A' && stri[i] <= 'Z') && (str[i] >= 'a' && stri[i] <= 'z'))
 	{
 		return;
-
-
-		

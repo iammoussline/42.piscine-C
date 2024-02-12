@@ -12,19 +12,34 @@
 
 #include <unistd.h>
 
-void	ft_strcnpy(char *dest, char *src, unsigned int a)
+char	*ft_strcnpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
 	i = 0;
 
 	while (i < n && src[i] != '\0')
 	{
-		while (i < n)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dest[i] = src[i];
+		i++;
 	}
-		return (dest);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
+/*
+int		main(void)
+{
+	char src[] = "Hello, world!";
+	char dest[50]; 
+
+	ft_strcnpy(dest, src, 2);
+
+	write(1, dest, 1);
+	write(1, "\n", 1);
+
+	return (0);
+}
+*/
