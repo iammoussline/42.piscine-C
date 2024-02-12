@@ -21,7 +21,6 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	mod = *a % *b;
 	*a = div;
 	*b = mod;
-	return ;
 }
 /*
 int main(void)
