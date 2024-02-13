@@ -11,26 +11,54 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
-	int	i;
-	i = 0;
+	int		i;
+	int		a;
 
-	while(str[i] != '\0')
+	i = 0;
+	if (str[i] == '\0')
 	{
-		if((str[i] >= 'A' && stri[i] <= 'Z') && (str[i] >= 'a' && stri[i] <= 'z'))
+		return (1);
+	}
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] = 1;
+			a = 1;
 			i++;
 		}
-		else if(str[i] >= 'a' && stri[i] <= 'z')
-		while(str[i] >= '0' && stri[i] <= '9')
+		else if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			str[i] = 0;
-			i++;
+			return (1);
+		}
+		else
+		{
+			return (0);
 		}
 	}
-	return (str);
+	return (a);
 }
+/*
+int main ()
+{
+	char str[] = "az";
+	char a[] = "85";
+	char b[] = "000000";
+
+	int i;
+	int o;
+	int m;
+
+	i = ft_str_is_alpha(str);
+	o = ft_str_is_alpha(a);
+	m = ft_str_is_alpha(b);
+
+	printf("%d", i);
+	printf("%d", o);
+	printf("%d", m);
+
+	return 0;
+}
+*/

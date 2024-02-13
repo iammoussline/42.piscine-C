@@ -11,10 +11,12 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+
 char	*ft_strcpy(char *dest, char *src)
+
 {
-	int	i;
+	int		i;
+
 	i = 0;
 	while (src[i] != '\0')
 	{
@@ -24,9 +26,9 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-
-int		main(void)
 /*
+int		main(void)
+
 {
 	char	src[] = "Hello, world!";
 	char	dest[50];
