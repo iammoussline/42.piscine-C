@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+#include <stdio.h>
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -24,21 +24,16 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-/*
+
 int		main(void)
+/*
 {
 	char	src[] = "Hello, world!";
 	char	dest[50];
 
 	ft_strcpy(dest, src);
 	
-	int i;
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		write(1, &dest[i], 1);
-		i++;
-	}
+	printf("%s, %s", src, dest);
 
 	return (0);
 }
