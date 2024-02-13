@@ -9,25 +9,31 @@
 /*   Updated: 2024/02/13 20:07:16 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <unistd.h>
 
 char    *ft_strupcase(char *str)
-
-	int i;
+{
+	int		i;
 	i = 0;
 
-	while(src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		while(str[i] >= 'a' && str[i] <= 'z')
+		while (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] -32;
+			i++;
 		}
-		i++;
 	}
-
-
-
-
-
-	dest[i] = '\0';
 	return (str);
+}
+/*int main ()
+{
+	char str[] = "abcdefghijklmnopqrstuvwxyz";
+
+	ft_strupcase(str);
+
+	printf("%s", str);
+
+	return 0;
+}
+*/
