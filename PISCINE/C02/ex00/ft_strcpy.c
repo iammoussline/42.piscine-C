@@ -32,7 +32,6 @@ int		main(void)
 	char	dest[50];
 
 	ft_strcpy(dest, src);
-	
 	printf("%s, %s", src, dest);
 
 	return (0);

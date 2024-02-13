@@ -20,11 +20,12 @@ int	ft_str_is_alpha(char *str)
 
 	while(str[i] != '\0')
 	{
-		while((str[i] >= 'A' && stri[i] <= 'Z') && (str[i] >= 'a' && stri[i] <= 'z'))
+		if((str[i] >= 'A' && stri[i] <= 'Z') && (str[i] >= 'a' && stri[i] <= 'z'))
 		{
 			str[i] = 1;
 			i++;
 		}
+		else if(str[i] >= 'a' && stri[i] <= 'z')
 		while(str[i] >= '0' && stri[i] <= '9')
 		{
 			str[i] = 0;
