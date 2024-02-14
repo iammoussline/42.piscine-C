@@ -35,7 +35,7 @@ char    *ft_strupcase(char *str)
     int i;
     i = 0;
     int o;
-    o = i - 1;
+    o = i - 1; 
 
     while (str[i] != '\0')
     {

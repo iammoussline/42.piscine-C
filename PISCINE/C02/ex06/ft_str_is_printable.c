@@ -26,7 +26,7 @@ int     ft_str_is_printable(char *str)
 	return (a);
 }
 /*
-int main ()
+int main () 
 {
 	char str[] = "oiguyijm4";
 	char a[] = "";
