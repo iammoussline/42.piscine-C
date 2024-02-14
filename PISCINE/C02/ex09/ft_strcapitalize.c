@@ -13,21 +13,56 @@
 #include <unistd.h>
 #include <stdio.h>
 
-char *ft_strcapitalize(char *str)
+char    *ft_strlowcase(char *str)
+{
+	int		i;
+	i = 0;
+
+	while (str[i] != '\0')
+	{
+		while (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] = str[i] +32;
+			i++;
+		}
+        i++;
+	}
+    return (str);
+}
+
+char    *ft_strupcase(char *str)
 {
     int i;
     i = 0;
+    int o;
+    o = i - 1;
 
     while (str[i] != '\0')
-	{
-		while (str[i] >= 'A' && str[i] <= 'z')
-		{
-			str[i] = str[i];
-			i++;
-		}
-	}
-	return (str);
+    {
+    
+        if ((str[o] >= 32 && str[o] <= 47) || (str[o] >= 58 && str[o] <= 64))
+        {
+            str[i] = -32;
+        }
+        else if ((str[i] >= 91 && str[i] <= 96) || (str[i] >= 123 && str[i] <= 126));
+            {
+                
+            }
+            i++;
+    }
+
+    return (str);
 }
+
+
+char    *ft_strcapitalize(char *str)
+{
+    ft_strlowcase(str);
+    ft_strupcase(str);
+    return (str);
+}
+
+
 int main ()
 {
 	char str[] = "Hello Bg il est 13h30";

@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+#include <stdio.h>
 
 char    *ft_strupcase(char *str)
 {
@@ -26,7 +27,7 @@ char    *ft_strupcase(char *str)
 	}
 	return (str);
 }
-/*int main ()
+int main ()
 {
 	char str[] = "abcdefghijklmnopqrstuvwxyz";
 
@@ -36,4 +37,3 @@ char    *ft_strupcase(char *str)
 
 	return 0;
 }
-*/
