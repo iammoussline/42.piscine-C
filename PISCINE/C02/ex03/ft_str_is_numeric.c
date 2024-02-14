@@ -6,13 +6,13 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 19:01:42 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/12 19:01:43 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:56:01 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int     ft_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int		i;
 	int		a;

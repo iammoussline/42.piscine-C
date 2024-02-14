@@ -6,13 +6,13 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:49:27 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/12 18:28:10 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:08:19 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_str_is_alpha(char *str)
+int	ft_str_is_alpha(char *str)
 {
 	int		i;
 	int		a;

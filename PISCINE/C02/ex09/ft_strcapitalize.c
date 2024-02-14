@@ -6,18 +6,17 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 20:07:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/13 20:07:55 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:07:29 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-char    *ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
-	int		i;
-	i = 0;
+	int	i;
 
+	i = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] >= 'A' && str[i] <= 'Z')
@@ -27,10 +26,10 @@ char    *ft_strlowcase(char *str)
 		}
         i++;
 	}
-    return (str);
+	return (str);
 }
 
-char    *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
     int i;
     i = 0;

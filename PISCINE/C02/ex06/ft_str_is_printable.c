@@ -1,7 +1,18 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/14 15:03:30 by mkandemi          #+#    #+#             */
+/*   Updated: 2024/02/14 15:03:50 by mkandemi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int     ft_str_is_printable(char *str)
+#include <unistd.h>
+
+int	ft_str_is_printable(char *str)
 {
 	int		i;
 	int		a;

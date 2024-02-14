@@ -6,13 +6,13 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 19:01:58 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/12 19:02:02 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:56:31 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int     ft_str_is_lowercase(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int		i;
 	int		a;

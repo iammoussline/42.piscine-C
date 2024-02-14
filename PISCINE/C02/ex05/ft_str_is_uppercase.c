@@ -6,16 +6,17 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:36:57 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/13 17:37:00 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:26:18 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int     ft_str_is_uppercase(char *str);
-{
-	int		i;
-	int		a;
+int	ft_str_is_uppercase(char *str)
+{	
+	int	i;
+	int	a;
 
 	i = 0;
 	if (str[i] == '\0')
@@ -35,25 +36,25 @@ int     ft_str_is_uppercase(char *str);
 		}
 	}
 	return (a);
-} 
+}	
 /*
 int main ()
 {
 	char str[] = "oiguyijm4";
-	char a[] = "85l";
+	char l[] = "85l";
 	char b[] = "Bonjour";
 
-	int i;
-	int o;
-	int m;
+	int z;
+	int x;
+	int y;
 
-	i = ft_str_is_alpha(str);
-	o = ft_str_is_alpha(a);
-	m = ft_str_is_alpha(b);
+	z = ft_str_is_uppercase(str);
+	x = ft_str_is_uppercase(l);
+	y = ft_str_is_uppercase(b);
 
-	printf("%d", i);
-	printf("%d", o);
-	printf("%d", m);
+	printf("%d", z);
+	printf("%d", x);
+	printf("%d", y);
 
 	return 0;
 }

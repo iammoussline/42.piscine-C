@@ -6,17 +6,16 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 20:07:13 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/13 20:07:16 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:05:20 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-#include <stdio.h>
 
-char    *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
-	int		i;
-	i = 0;
+	int	i;
 
+	i = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] >= 'a' && str[i] <= 'z')
@@ -27,6 +26,7 @@ char    *ft_strupcase(char *str)
 	}
 	return (str);
 }
+/*
 int main ()
 {
 	char str[] = "abcdefghijklmnopqrstuvwxyz";
@@ -36,4 +36,5 @@ int main ()
 	printf("%s", str);
 
 	return 0;
-}   
+}
+*/
