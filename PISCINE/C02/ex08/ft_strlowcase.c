@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 char	*ft_strlowcase(char *str)
 {

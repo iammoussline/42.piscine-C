@@ -31,7 +31,8 @@ int	ft_str_is_alpha(char *str)
 		}
 		else if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			return (1);
+			a = 1;
+			i++;
 		}
 		else
 		{
@@ -45,7 +46,7 @@ int main ()
 {
 	char str[] = "az";
 	char a[] = "85";
-	char b[] = "000000";
+	char b[] = "jdbjdj";
 
 	int i;
 	int o;

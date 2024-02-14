@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 char	*ft_strcnpy(char *dest, char *src, unsigned int n)
 {
@@ -30,17 +29,16 @@ char	*ft_strcnpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
+/*
 int		main(void)
 {
-	char src[] = "Hello, world!";
-	char dest[50]; 
+	char src[] = "word!";
+	char dest[10]; 
 
-	ft_strcnpy(dest, src, 2);
+	ft_strcnpy(dest, src, 10);
 
-	write(1, dest, 1);
-	write(1, "\n", 1);
+	write(1, dest, 10);
 
 	return (0);
 }
-
+*/
