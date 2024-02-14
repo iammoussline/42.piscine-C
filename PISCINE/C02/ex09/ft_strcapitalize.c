@@ -12,63 +12,42 @@
 
 #include <unistd.h>
 
-char	*ft_strlowcase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		while (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] = str[i] +32;
-			i++;
-		}
-        i++;
-	}
-	return (str);
-}
-
-char	*ft_strupcase(char *str)
+char *ft_strcapitalize(char *str)
 {
     int i;
-    i = 0;
     int o;
-    o = i - 1; 
 
+    i = 0;
+    o = 1;
     while (str[i] != '\0')
     {
-    
-        if ((str[o] >= 32 && str[o] <= 47) || (str[o] >= 58 && str[o] <= 64))
+        if ((str[i] >= 'a' && str[i] <= 'z') && o)
         {
-            str[i] = -32;
+            str[i] = str[i] - 32;
+            o = 0;
         }
-        else if ((str[i] >= 91 && str[i] <= 96) || (str[i] >= 123 && str[i] <= 126));
-            {
-                
-            }
-            i++;
+        else if (str[i] >= '0' && str[i] <= '9')
+        {
+            o = 0;
+        }
+        else if (str[i] < 'a' || str[i] > 'z')
+        {
+            o = 1;
+        }
+        else
+        {
+            o = 0;
+        }
+        i++;
     }
-
     return (str);
 }
-
-
-char    *ft_strcapitalize(char *str)
+/*
+int main()
 {
-    ft_strlowcase(str);
-    ft_strupcase(str);
-    return (str);
+    char str[] = "43mots hello bg il est 13h30";
+    ft_strcapitalize(str);
+    printf("%s\n", str);
+    return 0;
 }
-
-
-int main ()
-{
-	char str[] = "Hello Bg il est 13h30";
-
-	ft_strcapitalize(str);
-
-	printf("%s", str);
-
-	return 0;
-}
+*/

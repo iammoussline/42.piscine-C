@@ -11,34 +11,33 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-char	*ft_strcnpy(char *dest, char *src, unsigned int n)
+char *ft_strcnpy(char *dest, const char *src, unsigned int n)
 {
-	unsigned int	i;
+    unsigned int i = 0;
 
-	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+    while (i < n && src[i] != '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    if (i < n)
+    {
+        dest[i] = '\0';
+    }
+
+    return (dest);
 }
-/*
+
 int		main(void)
 {
 	char src[] = "word!";
-	char dest[10]; 
+	char dest[50]; 
 
 	ft_strcnpy(dest, src, 10);
 
-	write(1, dest, 10);
+	write(1, dest, 50);
 
 	return (0);
 }
-*/
