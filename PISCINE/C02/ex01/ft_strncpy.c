@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <string.h>
 
 char	*ft_strcnpy(char *dest, const char *src, unsigned int n)
 {
@@ -22,21 +22,23 @@ char	*ft_strcnpy(char *dest, const char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	if (i < n)
+	while (i < n)
 	{
 		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }
 /*
+#include <stdio.h>
 int		main(void)
 {
-	char src[] = "word!";
+	char src[50] = "word!";
 	char dest[50]; 
 
-	ft_strcnpy(dest, src, 10);
+	ft_strcnpy(dest, src, 100);
 
-	write(1, dest, 50);
+	printf("%s", dest);
 
 	return (0);
 }

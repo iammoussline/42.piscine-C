@@ -9,7 +9,8 @@
 /*   Updated: 2024/02/14 15:05:20 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
+#include <string.h>
 
 char	*ft_strupcase(char *str)
 {

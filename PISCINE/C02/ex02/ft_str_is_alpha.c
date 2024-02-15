@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include <string.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -20,12 +19,15 @@ int	ft_str_is_alpha(char *str)
 
 	i = 0;
 	if (str[i] == '\0')
-	{
 		return (1);
-	}
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z' && || str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			a = 1;
+			i++;
+		}
+		else if (str[i] >= 'A' && str[i] <= 'Z')
 		{
 			a = 1;
 			i++;
@@ -38,6 +40,7 @@ int	ft_str_is_alpha(char *str)
 	return (a);
 }
 /*
+#include <stdio.h>
 int main ()
 {
 	char str[] = "az";

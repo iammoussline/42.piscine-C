@@ -6,12 +6,11 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 20:07:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/15 14:15:04 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/15 14:07:44 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include <string.h>
 
 char	*ft_strcapitalize(char *str)
 {
@@ -22,7 +21,7 @@ char	*ft_strcapitalize(char *str)
 	o = 1;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z' && (str[i] >= '0' && str[i] <= '9'))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			if (o)
 			{
@@ -30,18 +29,21 @@ char	*ft_strcapitalize(char *str)
 			}
 			o = 0;
 		}
+		else if (str[i] >= '0' && str[i] <= '9')
+		o = 0;
+		else if ((str[i] >= 'A' && str[i] <= 'Z'))
+		str[i] += 32;
 		else
-		{
-			o = 1;
-		}
+		o = 1;
 		i++;
 	}
 	return (str);
 }
 /*
+#include <stdio.h>
 int main()
 {
-    char str[] = "43mots hello bg il est 13h30";
+    char str[] = "43mots heLlo bg AAAAAAA est 13h30";
     ft_strcapitalize(str);
     printf("%s\n", str);
     return 0;
