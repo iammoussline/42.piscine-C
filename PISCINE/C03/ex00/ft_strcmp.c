@@ -17,8 +17,8 @@ int ft_strcmp(char *s1, char *s2)
     
     while ((*s1 != '\0') && (*s2 == *s1))
     {
-        *s1 ++;
-        *s2 ++;
+        s1 ++;
+        s2 ++;
     }
     if (*s1 == *s2)
     {
@@ -32,17 +32,5 @@ int ft_strcmp(char *s1, char *s2)
     {
         return (-1);
     }
+    return (0);
 }
-
-int main()
-{
-    char s1[] = "Toto";
-    char s2[] = "toto";
-
-    ft_strcmp(s1, s2);
-
-    printf("%d et %d", s1, s2);
-
-    return 0;
-}
-
