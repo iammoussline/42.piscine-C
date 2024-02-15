@@ -13,7 +13,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
@@ -23,16 +22,12 @@ char	*ft_strcapitalize(char *str)
 	o = 1;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z' && (str[i] >= '0' && str[i] <= '9'))
 		{
 			if (o)
 			{
 				str[i] -= 32;
 			}
-			o = 0;
-		}
-		else if (str[i] >= '0' && str[i] <= '9')
-		{
 			o = 0;
 		}
 		else
