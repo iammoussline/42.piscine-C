@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 char *ft_strcnpy(char *dest, const char *src, unsigned int n)
 {
@@ -26,7 +25,6 @@ char *ft_strcnpy(char *dest, const char *src, unsigned int n)
     {
         dest[i] = '\0';
     }
-
     return (dest);
 }
 

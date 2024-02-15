@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -46,7 +47,7 @@ int main ()
 {
 	char str[] = "az";
 	char a[] = "85";
-	char b[] = "jdbjdj";
+	char b[] = "jdb58dj";
 
 	int i;
 	int o;

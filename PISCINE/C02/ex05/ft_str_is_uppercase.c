@@ -22,7 +22,7 @@ int	ft_str_is_uppercase(char *str)
 	{
 		return (1);
 	}
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
@@ -39,9 +39,9 @@ int	ft_str_is_uppercase(char *str)
 /*
 int main ()
 {
-	char str[] = "oiguyijm4";
+	char str[] = "";
 	char l[] = "85l";
-	char b[] = "Bonjour";
+	char b[] = "BONJOUR";
 
 	int z;
 	int x;

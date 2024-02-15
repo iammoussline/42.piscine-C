@@ -47,9 +47,9 @@ int main ()
 	int o;
 	int m;
 
-	i = ft_str_is_alpha(str);
-	o = ft_str_is_alpha(a);
-	m = ft_str_is_alpha(b);
+	i = ft_str_is_numeric(str);
+	o = ft_str_is_numeric(a);
+	m = ft_str_is_numeric(b);
 
 	printf("%d", i);
 	printf("%d", o);

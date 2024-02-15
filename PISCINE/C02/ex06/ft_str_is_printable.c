@@ -39,17 +39,17 @@ int	ft_str_is_printable(char *str)
 /*
 int main () 
 {
-	char str[] = "oiguyijm4";
-	char a[] = "";
-	char b[] = "";
+	char str[] = " - /  * *";
+	char a[] = "	";
+	char b[] = "krghlbrhgb";
 
 	int i;
 	int o;
 	int m;
 
-	i = ft_str_is_alpha(str);
-	o = ft_str_is_alpha(a);
-	m = ft_str_is_alpha(b);
+	i = ft_str_is_printable(str);
+	o = ft_str_is_printable(a);
+	m = ft_str_is_printable(b);
 
 	printf("%d", i);
 	printf("%d", o);
