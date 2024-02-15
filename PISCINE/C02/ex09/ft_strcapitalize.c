@@ -6,41 +6,42 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 20:07:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:07:29 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/15 14:15:04 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-char *ft_strcapitalize(char *str)
+
+char	*ft_strcapitalize(char *str)
 {
-    int i;
-    int o;
+	int	i;
+	int	o;
 
-    i = 0;
-    o = 1;
-    while (str[i] != '\0')
-    {
-        if ((str[i] >= 'a' && str[i] <= 'z') && o)
-        {
-            str[i] = str[i] - 32;
-            o = 0;
-        }
-        else if (str[i] >= '0' && str[i] <= '9')
-        {
-            o = 0;
-        }
-        else if (str[i] < 'a' || str[i] > 'z')
-        {
-            o = 1;
-        }
-        else
-        {
-            o = 0;
-        }
-        i++;
-    }
-    return (str);
+	i = 0;
+	o = 1;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			if (o)
+			{
+				str[i] -= 32;
+			}
+			o = 0;
+		}
+		else if (str[i] >= '0' && str[i] <= '9')
+		{
+			o = 0;
+		}
+		else
+		{
+			o = 1;
+		}
+		i++;
+	}
+	return (str);
 }
 /*
 int main()

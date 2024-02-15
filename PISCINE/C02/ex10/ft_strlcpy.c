@@ -10,4 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 
+unsigned int    (char *dest, char *src, unsigned int size)
+
+{
+	int i;
+
+	i = 0;
+	while(src[i] == '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return (dest);
+}
+/*
+int		main(void)
+
+{
+	char	src[] = "Hello, world!";
+	char	dest[50];
+
+	ft_strcpy(dest, src);
+	printf("%s, %s", src, dest);
+
+	return (0);
+}
+*/
