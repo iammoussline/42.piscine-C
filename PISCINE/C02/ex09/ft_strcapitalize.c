@@ -12,40 +12,55 @@
 
 #include <string.h>
 
+int	letters(char c)
+{
+	return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+}
+
+char	to_uppercase(char c)
+{
+	if (c >= 'a' && c <= 'z')
+	{
+		return c - 32;
+	}
+	return c;
+}
+
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
-	int	o;
+	char	last;
 
 	i = 0;
-	o = 1;
+	last = '\0';
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (letters(str[i]) && !(letters(last)))
 		{
-			if (o)
-			{
-				str[i] -= 32;
-			}
-			o = 0;
+			str[i] = to_uppercase(str[i]);
 		}
-		else if (str[i] >= '0' && str[i] <= '9')
-		o = 0;
-		else if ((str[i] >= 'A' && str[i] <= 'Z'))
-		str[i] += 32;
-		else
-		o = 1;
+		else if (letters(str[i]))
+		{
+			if (!letters(last))
+			{
+				str[i] += 32;
+			}
+		}
+		last = str[i];
 		i++;
 	}
 	return (str);
 }
 /*
 #include <stdio.h>
-int main()
-{
-    char str[] = "43mots heLlo bg AAAAAAA est 13h30";
-    ft_strcapitalize(str);
-    printf("%s\n", str);
+
+char *ft_strcapitalize(char *str);
+int letters(char c);
+char to_uppercase(char c);
+
+int main() {
+    char str[] = "43mots hel-lo bg IL est 13h30 Ahhhhh";
+    printf("%s\n", ft_strcapitalize(str));
     return 0;
 }
 */
