@@ -19,8 +19,9 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
     dest[i + o] = '\0';
     return dest;
 }
-#include <stdio.h>
 /*
+#include <stdio.h>
+
 int main()
 {
     char dest[50] = "Hello, ";
