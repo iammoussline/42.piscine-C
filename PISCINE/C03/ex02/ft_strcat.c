@@ -5,11 +5,11 @@ char *ft_strcat(char *dest, char *src)
 
 	i = 0;
 	o = 0;
-	while (dest[i] != '\0')
+	while(dest[i] != '\0')
 	{
 		i++;
 	}
-	while (src[o] != '\0')
+	while(src[o] != '\0')
 	{
 		dest[i + o] = src[o];
 		o++;

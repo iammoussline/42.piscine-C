@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 20:07:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/15 14:07:44 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/16 14:09:44 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 int	letters(char c)
 {
-	return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
 char	to_uppercase(char c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return c - 32;
+		return (c - 32);
 	}
-	return c;
+	return (c);
 }
 
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
-	char	last;
+	char		last;
 
 	i = 0;
 	last = '\0';
