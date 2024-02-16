@@ -2,25 +2,25 @@
 
 char    *ft_strstr(char *str, char *to_find)
 {
-    char *start;
-    char *search;
+    char *i;
+    char *o;
     
-    start = str;
-    search = to_find;
+    i = str;
+    o = to_find;
     if (*to_find == '\0')
     {
         return str;
     }
     while (*str != '\0')
     {
-        start = str;
-        search = to_find;
-        while (*search != '\0' && *start == *search)
+        i = str;
+        o = to_find;
+        while (*o != '\0' && *i == *o)
         {
-            start++;
-            search++;
+            i++;
+            o++;
         }
-        if (*search == '\0')
+        if (*o == '\0')
         {
             return str;
         }
