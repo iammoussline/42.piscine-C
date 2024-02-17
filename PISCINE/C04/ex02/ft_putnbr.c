@@ -1,13 +1,37 @@
 #include <unistd.h>
 
-void ft_putnbr(int nb)
+void	ft_putchar(char c)
 {
-    write(1, nb, 4);
+	write(1, &c, 1);
 }
 
-int main ()
+void ft_putnbr(int nb)
 {
-    int nb = 42;
-    ft_putnbr(42);
+    if (nb == -2147483648)
+    {
+        ft_putchar('-');
+        ft_putchar('2');
+        nb = 147483648;
+    }
+    if (nb < 0)
+    {
+        ft_putchar('-');
+        nb *= -1;
+    }
+    if (nb >= 10)
+    {
+        ft_putnbr(nb / 10);
+        ft_putnbr(nb % 10);
+    }
+    else
+    {
+        ft_putchar(nb + '0');
+    }
+}
+
+int main()
+{
+    int number = 42;
+    ft_putnbr(number);
     return 0;
 }

@@ -29,10 +29,10 @@ char	to_uppercase(char c)
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
-	char		last;
+	int		last;
 
 	i = 0;
-	last = '\0';
+	last = 0 + 1;
 	while (str[i] != '\0')
 	{
 		if (letters(str[i]) && !(letters(last)))
@@ -51,7 +51,7 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-/*
+
 #include <stdio.h>
 
 char *ft_strcapitalize(char *str);
@@ -59,8 +59,8 @@ int letters(char c);
 char to_uppercase(char c);
 
 int main() {
-    char str[] = "43mots hel-lo bg IL est 13h30 Ahhhhh";
+    char str[] = "43mots hel-lo bg IL est 13h30 AHHHHHHHHH";
     printf("%s\n", ft_strcapitalize(str));
     return 0;
 }
-*/
+
