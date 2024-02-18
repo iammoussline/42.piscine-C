@@ -27,12 +27,11 @@ int atoi(const char *str)
     
     return (sign * result);
 }
-/*
+
 int main() 
 {
-    const char *str = "-1568464648";
+    const char *str = "1 5 6 8 464648";
     int num = atoi(str);
     printf("%d\n", num);
     return 0;
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:28:38 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:44:58 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/18 18:29:45 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
+	int	i;
 	int	o;
+
 	i = 0;
 	o = 0;
 	while (dest[i] != '\0')

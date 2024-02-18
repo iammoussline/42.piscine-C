@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:27:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:40:22 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/18 18:44:58 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		return (-1);
 	}
 }
-/*
-#include <stdio.h>
-int main() 
-{
-    char str1[] = "world";
-    char str2[] = "hello";
-    char str3[] = "hell";
-    char str4[] = "hello";
-
-    printf("ft_strncmp(\"%s\", \"%s\", 3) = %d\n", str1, str2, ft_strncmp(str1, str2, 3));
-    printf("ft_strncmp(\"%s\", \"%s\", 3) = %d\n", str1, str3, ft_strncmp(str1, str3, 3));
-    printf("ft_strncmp(\"%s\", \"%s\", 5) = %d\n", str1, str4, ft_strncmp(str1, str4, 5));
-
-    return 0;
-}
-/*
