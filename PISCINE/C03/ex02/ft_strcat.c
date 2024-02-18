@@ -6,28 +6,28 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:28:26 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:28:28 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:42:33 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-    int	i;
-	int o;
+	int	i;
+	int	o;
 
 	i = 0;
 	o = 0;
-	while(dest[i] != '\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while(src[o] != '\0')
+	while (src[o] != '\0')
 	{
 		dest[i + o] = src[o];
 		o++;
 	}
 	dest[i + o] = '\0';
-	return dest;
+	return (dest);
 }
 /*
 #include <stdio.h>
@@ -42,4 +42,4 @@ int main()
     
     return 0;
 }
-*/
+/*

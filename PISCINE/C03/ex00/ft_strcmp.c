@@ -6,20 +6,20 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:54:44 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:28:15 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:36:49 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    while((*s1 != '\0') && (*s2 == *s1))
-    {
-        s1++;
-        s2++;
-    }
-    return (*s1 - *s2);
+	while ((*s1 != '\0') && (*s2 == *s1))
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
 /*
 #include <stdio.h>

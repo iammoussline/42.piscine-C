@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncat.c                                          :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:28:38 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:28:39 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:44:58 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-    size_t i; 
-    int o;
-
-    i = 0;
-    o = 0;
-    while (dest[i] != '\0')
-    {
-        i++;
-    }
-    while (src[o] != '\0' && o < nb)
-    {
-        dest[i + o] = src[o];
-        o++;
-    }
-    dest[i + o] = '\0';
-    return dest;
+	int i;
+	int	o;
+	i = 0;
+	o = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[o] != '\0' && o < nb)
+	{
+		dest[i + o] = src[o];
+		o++;
+	}
+	dest[i + o] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>

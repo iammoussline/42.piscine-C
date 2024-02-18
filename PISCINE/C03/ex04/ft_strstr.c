@@ -40,13 +40,13 @@ char    *ft_strstr(char *str, char *to_find)
     }
     return NULL;
 }
-/*
-#include<stdio.h>
 
+#include<stdio.h>
+/*
 int main()
 {
-    char str[] = "Hello, world!";
-    char to_find[] = "world";
+    char str[] = "fjghuodfhgiosdhfgojhdoihjorjhojodrihworld!";
+    char to_find[] = "world!";
     char *result = ft_strstr(str, to_find);
     
     if (result != NULL) {

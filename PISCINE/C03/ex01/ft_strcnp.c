@@ -6,37 +6,37 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:27:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:27:59 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:40:22 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-    while (n > 0 && *s1 != '\0' && *s2 != '\0' && *s1 == *s2)
-    {
-        s1++;
-        s2++;
-        n--;
-    }
-    if (n == 0 || (*s1 == *s2))
-    {
-        return 0;
-    }
-    else if (*s1 > *s2)
-    {
-        return 1;
-    }
-    else
-    {
-        return -1;
-    }
+	while (n > 0 && *s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+		n--;
+	}
+	if (n == 0 || (*s1 == *s2))
+	{
+		return (0);
+	}
+	else if (*s1 > *s2)
+	{
+		return (1);
+	}
+	else
+	{
+		return (-1);
+	}
 }
 /*
 #include <stdio.h>
 int main() 
 {
-    char str1[] = "hello";
-    char str2[] = "world";
+    char str1[] = "world";
+    char str2[] = "hello";
     char str3[] = "hell";
     char str4[] = "hello";
 
@@ -46,4 +46,4 @@ int main()
 
     return 0;
 }
-*/
+/*
