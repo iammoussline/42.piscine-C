@@ -25,14 +25,14 @@ int atoi(const char *str)
         i++;
     }
     
-    return sign * result;
+    return (sign * result);
 }
 /*
 int main() 
 {
-    const char *str = "123";
+    const char *str = "-1568464648";
     int num = atoi(str);
-    printf("Entier: %d\n", num);
+    printf("%d\n", num);
     return 0;
 }
 */
