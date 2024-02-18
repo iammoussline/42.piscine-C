@@ -33,4 +33,3 @@ int main()
     int num = atoi(str);
     printf("Entier: %d\n", num);
     return 0;
-}
