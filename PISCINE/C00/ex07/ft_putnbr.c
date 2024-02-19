@@ -31,7 +31,7 @@ void ft_putnbr(int nb)
 /*
 int main()
 {
-    int number = 42;
+    int number = 2147483649;
     ft_putnbr(number);
     return 0;
 }
