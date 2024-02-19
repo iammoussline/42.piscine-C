@@ -16,16 +16,14 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int	i;
 	int	o;
-	unsigned int	m;
 
 	i = 0;
 	o = 0;
-	m = nb;
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while (src[o] != '\0' || src[o] < m)
+	while (src[o] != '\0' || o < nb)
 	{
 		dest[i + o] = src[o];
 		o++;
@@ -33,7 +31,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[i + o] = '\0';
 	return (dest);
 }
-/*
+
 #include <stdio.h>
 
 int main()
@@ -48,4 +46,4 @@ int main()
     
     return 0;
 }
-*/
+
