@@ -4,9 +4,10 @@ int ft_iterative_power(int nb, int power)
 {
     int o;
     o = 1;
+
     while(power > 0)
     {
-        int o *= nb;
+        o *= nb;
         power--;
     
     }
