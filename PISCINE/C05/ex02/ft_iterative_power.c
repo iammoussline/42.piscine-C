@@ -4,25 +4,22 @@ int ft_iterative_power(int nb, int power)
 {
     int o;
     o = 1;
-
-    while (i <= nb)
+    while(power > 0)
     {
-        if(i <= nb)
-        {
-            o = o * i;
-        }
-        i++;
+        int o *= nb;
+        power--;
+    
     }
-
     return (o);
 }
-/*
+
 int main ()
 {
     int num;
     num = 5;
-    printf("factoriel de %d, avc recursivite est de %d", num, ft_iterative_factorial(5));
+    int nume = 2;
+    ft_iterative_power(num, nume);
+    printf("puissance de %d", ft_iterative_power(num, nume));
 
     return 0;
 }
-*/
