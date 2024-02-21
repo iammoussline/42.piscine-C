@@ -14,7 +14,7 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	undigned int	i;
+	unsigned int	i;
 	unsigned int	o;
 
 	i = 0;
@@ -25,10 +25,11 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	}
 	while (src[o] != '\0' && o < nb)
 	{
-		dest[i + o] = src[o];
+		dest[i] = src[o];
+		i++;
 		o++;
 	}
-	dest[i + o] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 /*
@@ -36,7 +37,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 int main()
 {
-    char dest[50] = "Hello, ";
+    char dest[50] = "";
     char src[] = "world!";
     unsigned int nb = 3;
     
