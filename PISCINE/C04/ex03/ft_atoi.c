@@ -15,15 +15,13 @@
 int	atoi(const char *str)
 {
 	int	result;
-	int	sign;
 	int	i;
 	int	o;
 
 	result = 0;
-	sign = 1;
 	i = 0;
 	o = 0;
-	while (str[i] >= 9 && str[i] <= 13 || str[i] == ' ')
+	while ((str[i] >= 9) && (str[i] <= 13 || str[i] == ' '))
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{
