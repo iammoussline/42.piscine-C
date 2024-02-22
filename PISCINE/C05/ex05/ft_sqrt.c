@@ -17,3 +17,16 @@ int ft_sqrt(int nb)
     }
     return (0);
 }
+
+int main() {
+    int number;
+    printf("Entrez un nombre : ");
+    scanf("%d", &number);
+    int result = square_root(number);
+    if (result != 0) {
+        printf("La racine carrée entière de %d est %d.\n", number, result);
+    } else {
+        printf("Il n'y a pas de racine carrée entière pour %d.\n", number);
+    }
+    return 0;
+}
