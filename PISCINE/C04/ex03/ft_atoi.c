@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int	atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int	result;
 	int	i;
@@ -38,12 +38,12 @@ int	atoi(const char *str)
 		result = result * -1;
 	return (result);
 }
-/*
-int main() 
+
+int main(int argc, char **argv) 
 {
-    const char *str = " ---+--+1234ab567";
-    int num = atoi(str);
-    printf("%d\n", num);
+    char *str = argv[1];
+    ft_atoi(str);
+    printf("%d\n", *str);
     return 0;
 }
-*/
+
