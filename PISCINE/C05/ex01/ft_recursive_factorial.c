@@ -14,7 +14,7 @@
 
 int	ft_recursive_factorial(int nb)
 {
-	int	o;
+	long	o;
 
 	o = nb;
 	if (o == 1)

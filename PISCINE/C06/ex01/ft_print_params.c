@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 	int	o;
 
 	i = 1;
+	(void) argc;
 	while (argv[i] != 0)
 	{
 		o = 0;

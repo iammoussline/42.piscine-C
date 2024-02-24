@@ -42,10 +42,6 @@ int main(void)
     char *duplicate_str = ft_strdup(original_str);
     if (duplicate_str != NULL)
     {
-        // Utilisez la chaîne dupliquée
-        // ...
-        
-        // Libérez la mémoire allouée
         free(duplicate_str);
     }
     return (0);
