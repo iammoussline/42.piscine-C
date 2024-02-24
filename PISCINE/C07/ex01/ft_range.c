@@ -20,3 +20,23 @@ int *ft_range(int min, int max) {
 
     return tableau;
 }
+
+int main() {
+    int min = 5;
+    int max = 10;
+
+    int *resultat = ft_range(min, max);
+
+    if (resultat != NULL) {
+        for (int i = 0; i < max - min; i++) {
+            printf("%d ", resultat[i]);
+        }
+        printf("\n");
+
+        free(resultat);
+    } else {
+        printf("Erreur : min est supérieur ou égal à max, ou valeurs extrêmes des entiers.\n");
+    }
+
+    return 0;
+}
