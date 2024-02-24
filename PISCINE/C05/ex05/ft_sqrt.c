@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 20:54:50 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/23 20:57:02 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/24 10:18:42 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,16 @@ int	ft_sqrt(int nb)
 		}
 		i++;
 	}
-	return (0);
+	return (i);
 }
+/*
+int main ()
+{
+    int num;
+    num = 65646545;
+    ft_sqrt(num);
+    printf("La racine carre de %d est %d\n", num, ft_sqrt(num));
+
+    return 0;
+}
+*/

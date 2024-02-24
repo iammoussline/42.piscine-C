@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 20:43:19 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/23 20:46:14 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/24 10:25:50 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,27 @@
 
 int	ft_iterative_factorial(int nb)
 {
-	int	o;
 	int	i;
+	int	o;
 
+	if (nb < 0)
+		return (0);
 	o = 1;
-	i = 2;
+	i = 1;
 	while (i <= nb)
 	{
-		if (i <= nb)
-		{
-			o = o * i;
-		}
+		o *= i;
 		i++;
 	}
 	return (o);
 }
+/*
+}
+int main ()
+{
+	int nombre = 2;
+	ft_iterative_factorial(nombre);
+	printf("le fqctoriel de %d est %d", nombre, ft_iterative_factorial(nombre));
+	return 0;
+}
+*/

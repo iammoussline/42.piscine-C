@@ -35,3 +35,13 @@ int	ft_is_prime(int nb)
 	}
 	return (1);
 }
+/*
+int main ()
+{
+    int num;
+    num = 1;
+	printf("Si le nombre est premier vous verrez 1 sinon 0 : %d", ft_is_prime(num));
+
+    return 0;
+}
+*/

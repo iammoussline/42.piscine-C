@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 20:51:05 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/23 20:52:14 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/24 10:13:23 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_recursive_power(int nb, int power)
 {
-	if (nb == 0)
+	if (nb == 0 && power == 0)
 	{
 		return (1);
 	}
 	else if (power <= 1)
 	{
-		return (nb, power);
+		return (nb);
 	}
 	else
 	{
@@ -30,10 +30,10 @@ int	ft_recursive_power(int nb, int power)
 /*
 int main ()
 {
-    int i = 1000;
-    int o = 3;
+    int i = 0;
+	int o = 0;
     ft_recursive_power(i, o);
-    printf("La puissance de 3 est %d\n", ft_recursive_power(i, o));
+    printf("La puissance de %d est %d\n", i, ft_recursive_power(i, o));
     return 0;
 }
 */

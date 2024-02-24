@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 20:46:23 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/23 20:48:06 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/24 10:13:00 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@ int	ft_iterative_power(int nb, int power)
 	int	o;
 
 	o = 1;
+	if (nb < 0)
+	{
+		return (0);
+	}
+	else if (nb == 0)
+	{
+		return (1);
+	}
 	while (power > 0)
 	{
 		o *= nb;
@@ -28,10 +36,10 @@ int	ft_iterative_power(int nb, int power)
 int main ()
 {
     int num;
-    num = 5;
+    num = -1;
     int nume = 2;
     ft_iterative_power(num, nume);
-    printf("puissance de %d", ft_iterative_power(num, nume));
+    printf("puissance de %d est %d", num, ft_iterative_power(num, nume));
 
     return 0;
 }
