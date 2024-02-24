@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <limits.h>
+#include <stdio.h>
 
 int *ft_range(int min, int max) {
     if (min >= max || min == INT_MAX || max == INT_MIN) {
@@ -22,8 +23,8 @@ int *ft_range(int min, int max) {
 }
 
 int main() {
-    int min = 5;
-    int max = 10;
+    int min = -21474836;
+    int max = 214748363;
 
     int *resultat = ft_range(min, max);
 
