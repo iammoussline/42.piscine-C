@@ -43,11 +43,12 @@ void	while1(char a, char b, char c)
 	}
 	ft_putchar(a, b, c);
 }
-/*
+
 void	ft_print_comb(void)
 {
 	while1(48, 49, 50);
 }
+/*
 int main() {
     ft_print_comb();
     return 0;
