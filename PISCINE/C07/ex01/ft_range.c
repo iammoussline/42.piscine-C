@@ -1,43 +1,34 @@
 #include <stdlib.h>
-#include <limits.h>
-#include <stdio.h>
 
-int *ft_range(int min, int max) {
-    if (min >= max || min == INT_MAX || max == INT_MIN) {
-        return NULL;
-    }
+int	*ft_range(int min, int max)
+{
+	int	*p;
+	int	i;
 
-    int taille = max - min;
-    int *tableau = (int *)malloc(taille * sizeof(int));
-
-    if (tableau == NULL) {
-        return NULL;
-    }
-
-    int *ptr = tableau;
-    while (min < max) {
-        *ptr++ = min++;
-    }
-
-    return tableau;
+	if (min >= max)
+		return (0);
+	p = malloc((max - min) * sizeof(int));
+	if (p == 0)
+		return (0);
+	i = 0;
+	while (i < (max - min))
+	{
+		p[i] = min + i;
+		i++;
+	}
+	return (p);
 }
-
-int main() {
-    int min = -21474836;
-    int max = 214748363;
-
-    int *resultat = ft_range(min, max);
-
-    if (resultat != NULL) {
-        for (int i = 0; i < max - min; i++) {
-            printf("%d ", resultat[i]);
-        }
-        printf("\n");
-
-        free(resultat);
-    } else {
-        printf("Erreur : min est supérieur ou égal à max, ou valeurs extrêmes des entiers.\n");
-    }
-
-    return 0;
-}
+/*#include <stdio.h>
+int main()
+{
+    int *p;
+    int i;
+	i = 0;
+    p = ft_range(0, 20);
+    while (i < 20)
+    {
+        printf("%d ", p[i]);
+        i++;
+    }   
+    free(p);
+}*/
