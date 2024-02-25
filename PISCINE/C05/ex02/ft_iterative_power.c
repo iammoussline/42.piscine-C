@@ -12,20 +12,20 @@
 
 int	ft_iterative_power(int nb, int power)
 {
-	int	numero;
+	int	o;
 
 	if (power == 0)
 		return (1);
 	else if (power < 0)
 		return (0);
-	numero = nb;
+	o = nb;
 	power--;
 	while (power > 0)
 	{
-		numero = numero * nb;
+		o = o * nb;
 		power--;
 	}
-	return (numero);
+	return (o);
 }
 /*#include <stdio.h>
 int main()

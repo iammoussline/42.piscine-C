@@ -12,21 +12,21 @@
 
 int	ft_is_prime(int nb)
 {
-	int	numero;
-	int	numeroinv;
+	int	o;
+	int	i;
 
 	if (nb <= 1 || nb == 4)
 		return (0);
 	else if ((nb % 2 == 0 || nb % 3 == 0 || nb % 5 == 0) && nb > 5)
 		return (0);
-	numero = 3;
-	numeroinv = nb / 2;
-	while (numero <= numeroinv)
+	o = 3;
+	i = nb / 2;
+	while (o <= i)
 	{
-		if (nb % numero == 0 || nb % numero == 0)
+		if (nb % o == 0 || nb % o == 0)
 			return (0);
-		numero += 2;
-		numeroinv -= 2;
+		o += 2;
+		i -= 2;
 	}
 	return (1);
 }

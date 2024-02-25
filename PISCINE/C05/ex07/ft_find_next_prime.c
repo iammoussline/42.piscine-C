@@ -12,8 +12,8 @@
 
 int	ft_find_next_prime(int nb)
 {
-	int	numero;
-	int	numeroinv;
+	int	o;
+	int	i;
 
 	if (nb <= 2)
 		return (2);
@@ -23,14 +23,14 @@ int	ft_find_next_prime(int nb)
 		return (5);
 	else
 	{
-		numero = 3;
-		numeroinv = nb / 2;
-		while (numero <= numeroinv)
+		o = 3;
+		i = nb / 2;
+		while (o <= i)
 		{
-			if (nb % numero == 0 || nb % numeroinv == 0)
+			if (nb % o == 0 || nb % i == 0)
 				return (ft_find_next_prime(nb + 1));
-			numero += 2;
-			numeroinv -= 2;
+			o += 2;
+			i -= 2;
 		}
 	}
 	return (nb);

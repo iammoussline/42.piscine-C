@@ -12,7 +12,7 @@
 
 int	ft_fibonacci(int index)
 {
-	int	numero;
+	int	o;
 
 	if (index < 0)
 		return (-1);
@@ -22,10 +22,10 @@ int	ft_fibonacci(int index)
 		return (1);
 	else
 	{
-		numero = ft_fibonacci(index - 1);
-		numero = numero + ft_fibonacci(index - 2);
+		o = ft_fibonacci(index - 1);
+		o = o + ft_fibonacci(index - 2);
 	}
-	return (numero);
+	return (o);
 }
 /*#include <stdio.h>
 int main()

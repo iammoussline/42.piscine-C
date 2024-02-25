@@ -36,8 +36,10 @@ char	*ft_strdup(char *src)
 	p[i] = '\0';
 	return (p);
 }
-/*int main(void)
+/*
+int main(void)
 {
 	char text1[] = "Teste";
 	printf("%s\n", ft_strdup(text1));
-}*/
+}
+*/

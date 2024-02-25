@@ -72,7 +72,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	s[b] = '\0';
 	return (s);
 }
-/*#include <stdio.h>
+#include <stdio.h>
 int	main(void)
 {
 	char *text[10];
@@ -89,4 +89,4 @@ int	main(void)
 	text[9] = "10";
 
 	printf("%s\n", ft_strjoin(0, text, " | "));
-}*/
+}

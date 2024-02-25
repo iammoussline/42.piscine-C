@@ -12,7 +12,7 @@
 
 int	ft_recursive_power(int nb, int power)
 {
-	int	numero;
+	int	o;
 
 	if (power < 0)
 		return (0);
@@ -20,13 +20,13 @@ int	ft_recursive_power(int nb, int power)
 		return (1);
 	else if (power > 1)
 	{
-		numero = ft_recursive_power(nb, power - 1);
-		numero = numero * nb;
+		o = ft_recursive_power(nb, power - 1);
+		o = o * nb;
 		nb--;
 	}
 	else
-		numero = nb;
-	return (numero);
+		o = nb;
+	return (o);
 }
 /*
 #include <stdio.h>

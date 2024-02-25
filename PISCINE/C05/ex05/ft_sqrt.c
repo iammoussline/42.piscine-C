@@ -12,15 +12,15 @@
 
 int	ft_sqrt(int nb)
 {
-	long int	num;
+	long int	o;
 
-	num = 1;
+	o = 1;
 	if (nb == 0)
 		return (0);
-	while (nb > num * num)
-		num++;
-	if (nb == num * num)
-		return (num);
+	while (nb > o * o)
+		o++;
+	if (nb == o * o)
+		return (o);
 	else
 		return (0);
 }

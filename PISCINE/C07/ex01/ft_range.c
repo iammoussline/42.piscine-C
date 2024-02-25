@@ -36,8 +36,8 @@ int main()
     int *p;
     int i;
 	i = 0;
-    p = ft_range(0, 20);
-    while (i < 20)
+    p = ft_range(0, 50);
+    while (i < 50)
     {
         printf("%d ", p[i]);
         i++;

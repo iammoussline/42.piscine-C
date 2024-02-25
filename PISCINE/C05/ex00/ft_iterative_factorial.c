@@ -12,20 +12,20 @@
 
 int	ft_iterative_factorial(int nb)
 {
-	int	numero;
+	int	o;
 
 	if (nb < 0)
 		return (0);
 	else if (nb == 0)
 		return (1);
-	numero = nb;
+	o = nb;
 	nb--;
 	while (nb > 1)
 	{
-		numero = numero * nb;
+		o = o * nb;
 		nb--;
 	}
-	return (numero);
+	return (o);
 }
 /*#include <stdio.h>
 
