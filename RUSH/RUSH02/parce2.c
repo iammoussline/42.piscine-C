@@ -4,8 +4,30 @@
 #include <unistd.h>
 #include <string.h>
 
-#define MAX_LONGUEUR_CLE_VALEUR 256
-#define MAX_ENTREES 1000
+char	*ft_strdup(char *src)
+{
+	int		i;
+	int		len;
+	char	*p;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	len = i;
+	p = (char *)malloc((len + 1) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		p[i] = src[i];
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
+}
 
 typedef struct
 {
@@ -27,7 +49,7 @@ EntreeDictionnaire* parserFichierDict(const char *nomFichier, int *nbEntrees)
         return NULL;
     }
 
-    EntreeDictionnaire *entrees = malloc(MAX_ENTREES * sizeof(EntreeDictionnaire));
+    EntreeDictionnaire *entrees = malloc(256 * sizeof(EntreeDictionnaire));
     if (entrees == NULL)
     {
         perror("Dict Error\n");
@@ -35,11 +57,11 @@ EntreeDictionnaire* parserFichierDict(const char *nomFichier, int *nbEntrees)
         return NULL;
     }
 
-    char buffer[MAX_LONGUEUR_CLE_VALEUR];
+    char buffer[4096];
     *nbEntrees = 0;
 
     ssize_t bytesRead;
-    while ((*nbEntrees < MAX_ENTREES) && (bytesRead = read(fd, buffer, sizeof(buffer))) > 0)
+    while ((*nbEntrees < 256) && (bytesRead = read(fd, buffer, sizeof(buffer))) > 0)
     {
         char *delimiter = strchr(buffer, ':');
         if (delimiter != NULL)
@@ -77,7 +99,7 @@ void libererDictionnaire(EntreeDictionnaire *entrees, int nbEntrees)
 int main()
 {
     int nbEntrees;
-    EntreeDictionnaire *entrees = parserFichierDict("exemple.dict", &nbEntrees);
+    EntreeDictionnaire *entrees = parserFichierDict("numbers.dict", &nbEntrees);
     if (entrees == NULL)
     {
         char error_msg[] = "Dict Error\n";
