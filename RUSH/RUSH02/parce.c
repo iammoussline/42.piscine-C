@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <string.h>
 
 #define MAX_LONGUEUR_CLE_VALEUR 256
 #define MAX_ENTREES 1000
@@ -11,6 +12,11 @@ typedef struct
     char *cle;
     char *valeur;
 } EntreeDictionnaire;
+
+void ft_putchar(char c)
+{
+    write(STDOUT_FILENO, &c, 1);
+}
 
 EntreeDictionnaire* parserFichierDict(const char *nomFichier, int *nbEntrees)
 {
@@ -58,10 +64,12 @@ EntreeDictionnaire* parserFichierDict(const char *nomFichier, int *nbEntrees)
 
 void libererDictionnaire(EntreeDictionnaire *entrees, int nbEntrees)
 {
-    for (int i = 0; i < nbEntrees; ++i)
+    int i = 0;
+    while (i < nbEntrees)
     {
         free(entrees[i].cle);
         free(entrees[i].valeur);
+        i++;
     }
     free(entrees);
 }
@@ -72,13 +80,30 @@ int main()
     EntreeDictionnaire *entrees = parserFichierDict("exemple.dict", &nbEntrees);
     if (entrees == NULL)
     {
-        printf("Dict Error\n");
+        char error_msg[] = "Dict Error\n";
+        int i = 0;
+        while (error_msg[i] != '\0') {
+            ft_putchar(error_msg[i]);
+            i++;
+        }
         return 1;
     }
 
-    for (int i = 0; i < nbEntrees; ++i)
+    int i = 0;
+    char c;
+    while (i < nbEntrees)
     {
-        printf("Clé: %s, Valeur: %s\n", entrees[i].cle, entrees[i].valeur);
+        char *ptr = entrees[i].cle;
+        while ((c = *ptr++) != '\0') {
+            ft_putchar(c);
+        }
+        ft_putchar(':');
+        ptr = entrees[i].valeur;
+        while ((c = *ptr++) != '\0') {
+            ft_putchar(c);
+        }
+        ft_putchar('\n');
+        i++;
     }
 
     libererDictionnaire(entrees, nbEntrees);
