@@ -3,42 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:54:50 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/24 10:18:42 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 15:23:18 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 15:23:19 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_sqrt(int nb)
 {
-	long	i;
+	long int	num;
 
-	i = 1;
-	if (nb <= 0)
-	{
+	num = 1;
+	if (nb == 0)
 		return (0);
-	}
-	while (i * i <= nb)
-	{
-		if (i * i == nb)
-		{
-			return (i);
-		}
-		i++;
-	}
-	return (i);
+	while (nb > num * num)
+		num++;
+	if (nb == num * num)
+		return (num);
+	else
+		return (0);
 }
-/*
-int main ()
+/*#include <stdio.h>
+int main (void)
 {
-    int num;
-    num = 65646545;
-    ft_sqrt(num);
-    printf("La racine carre de %d est %d\n", num, ft_sqrt(num));
-
-    return 0;
-}
-*/
+	printf("%d\n",ft_sqrt(1));
+}*/

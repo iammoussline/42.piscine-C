@@ -3,36 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:52:31 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/23 20:54:37 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 14:31:48 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 14:31:50 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_fibonacci(int index)
 {
+	int	numero;
+
 	if (index < 0)
-	{
 		return (-1);
-	}
-	else if (index <= 1)
-	{
-		return (index);
-	}
+	else if (index == 0)
+		return (0);
+	else if (index == 1)
+		return (1);
 	else
 	{
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+		numero = ft_fibonacci(index - 1);
+		numero = numero + ft_fibonacci(index - 2);
 	}
+	return (numero);
 }
-/*
-int main ()
+/*#include <stdio.h>
+int main()
 {
-    int index = -5651;
-    ft_fibonacci(index);
-    printf("Fibonacci de 5 est %d\n", ft_fibonacci(index));
-    return 0;
-}
-*/
+	int i;
+	i = ft_fibonacci(7);
+	printf("%d", i);
+}*/

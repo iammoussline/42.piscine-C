@@ -3,37 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:51:05 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/24 10:13:23 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 14:02:01 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 14:02:02 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_recursive_power(int nb, int power)
 {
-	if (nb == 0 && power == 0)
-	{
+	int	numero;
+
+	if (power < 0)
+		return (0);
+	if (power == 0)
 		return (1);
-	}
-	else if (power <= 1)
+	else if (power > 1)
 	{
-		return (nb);
+		numero = ft_recursive_power(nb, power - 1);
+		numero = numero * nb;
+		nb--;
 	}
 	else
-	{
-		return (nb * ft_recursive_power(nb, power - 1));
-	}
+		numero = nb;
+	return (numero);
 }
 /*
-int main ()
+#include <stdio.h>
+int main()
 {
-    int i = 0;
-	int o = 0;
-    ft_recursive_power(i, o);
-    printf("La puissance de %d est %d\n", i, ft_recursive_power(i, o));
-    return 0;
-}
-*/
+	int i;
+	i = ft_recursive_power(2, 0);
+	printf("%d", i);
+}*/

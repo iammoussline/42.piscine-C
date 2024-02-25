@@ -1,46 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:46:23 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/24 10:13:00 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 13:54:05 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 13:54:07 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_iterative_power(int nb, int power)
 {
-	long	o;
+	int	numero;
 
-	o = 1;
-	if (nb < 0)
-	{
-		return (0);
-	}
-	else if (nb == 0)
-	{
+	if (power == 0)
 		return (1);
-	}
+	else if (power < 0)
+		return (0);
+	numero = nb;
+	power--;
 	while (power > 0)
 	{
-		o *= nb;
+		numero = numero * nb;
 		power--;
 	}
-	return (o);
+	return (numero);
 }
-/*
-int main ()
+/*#include <stdio.h>
+int main()
 {
-    int num;
-    num = -1;
-    int nume = 2;
-    ft_iterative_power(num, nume);
-    printf("puissance de %d est %d", num, ft_iterative_power(num, nume));
-
-    return 0;
-}
-*/
+	int i;
+	i = ft_recursive_factorial(2, 3);
+	printf("%d", i);
+	return 0;
+}*/

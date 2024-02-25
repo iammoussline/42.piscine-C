@@ -3,38 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:43:19 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/24 10:25:50 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 13:19:53 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 13:19:56 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_iterative_factorial(int nb)
 {
-	long	i;
-	long	o;
+	int	numero;
 
 	if (nb < 0)
 		return (0);
-	o = 1;
-	i = 1;
-	while (i <= nb)
+	else if (nb == 0)
+		return (1);
+	numero = nb;
+	nb--;
+	while (nb > 1)
 	{
-		o *= i;
-		i++;
+		numero = numero * nb;
+		nb--;
 	}
-	return (o);
+	return (numero);
 }
-/*
-}
-int main ()
+/*#include <stdio.h>
+
+int main()
 {
-	int nombre = 2;
-	ft_iterative_factorial(nombre);
-	printf("le fqctoriel de %d est %d", nombre, ft_iterative_factorial(nombre));
-	return 0;
-}
-*/
+	int i;
+	i = ft_iterative_factorial(3);
+	printf("%d", i);
+}*/

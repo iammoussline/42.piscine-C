@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:48:27 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/24 10:01:29 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 13:40:39 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 13:53:23 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_recursive_factorial(int nb)
 {
-	long	o;
+	int	numero;
 
-	o = nb;
-	if (o == 1)
-	{
+	if (nb < 0)
+		return (0);
+	else if (nb == 0)
 		return (1);
+	else if (nb > 2)
+	{
+		numero = ft_recursive_factorial(nb - 1);
+		numero = numero * nb;
+		nb--;
 	}
 	else
-	{
-		return (o * ft_recursive_factorial(nb - 1));
-	}
+		numero = nb;
+	return (numero);
 }
 /*
-int main ()
+#include <stdio.h>
+int main()
 {
-	int o;
-	int nombre = 5;
-	ft_recursive_factorial(nombre);
-	printf("le fqctoriel de %d est %d", nombre, ft_recursive_factorial(nombre));
-	return 0;
-}
-*/
+	int i;
+	i = ft_recursive_factorial(3);
+	printf("%d", i);
+}*/

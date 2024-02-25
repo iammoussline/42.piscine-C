@@ -3,45 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 20:57:15 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/23 20:59:54 by mkandemi         ###   ########.fr       */
+/*   Created: 2021/07/19 16:00:56 by rteles            #+#    #+#             */
+/*   Updated: 2021/07/19 16:00:58 by rteles           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_is_prime(int nb)
 {
-	int	i;
+	int	numero;
+	int	numeroinv;
 
-	i = 2;
-	if (nb <= 1)
-	{
+	if (nb <= 1 || nb == 4)
 		return (0);
-	}
-	if (nb == 2)
+	else if ((nb % 2 == 0 || nb % 3 == 0 || nb % 5 == 0) && nb > 5)
+		return (0);
+	numero = 3;
+	numeroinv = nb / 2;
+	while (numero <= numeroinv)
 	{
-		return (1);
-	}
-	while (i * i <= nb)
-	{
-		if (nb % i == 0)
-		{
+		if (nb % numero == 0 || nb % numero == 0)
 			return (0);
-		}
-		i++;
+		numero += 2;
+		numeroinv -= 2;
 	}
 	return (1);
 }
-/*
-int main ()
+/*#include <stdio.h>
+int main()
 {
-    int num;
-    num = 1;
-	printf("Si le nombre est premier vous verrez 1 sinon 0 : %d", ft_is_prime(num));
-
-    return 0;
-}
-*/
+	int i;
+	i = ft_is_prime(2147483647);
+	printf("I: %d\n", i);
+}*/
