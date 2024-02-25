@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 09:30:08 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/12 11:58:57 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:57:16 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr(char *str)
 	while (*str != '\0')
 	{
 		write (1, str, 1);
-			str++;
+		str++;
 	}
 }

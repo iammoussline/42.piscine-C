@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 19:36:35 by thinkpad          #+#    #+#             */
-/*   Updated: 2024/02/25 19:36:48 by thinkpad         ###   ########.fr       */
+/*   Created: 2024/02/25 19:31:48 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:32:04 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	long int	o;
+	unsigned int	i;
+	unsigned int	l;
 
-	o = 1;
-	if (nb == 0)
-		return (0);
-	while (nb > o * o)
-		o++;
-	if (nb == o * o)
-		return (o);
-	else
-		return (0);
+	i = 0;
+	l = 0;
+	while (src[l] != '\0')
+		l++;
+	if (size != 0)
+	{
+		while ((src[i] != '\0') && (i < (size - 1)))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (l);
 }
-/*#include <stdio.h>
-int main (void)
-{
-	printf("%d\n",ft_sqrt(1));
-}*/

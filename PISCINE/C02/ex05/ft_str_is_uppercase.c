@@ -6,14 +6,14 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:36:57 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:26:18 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/25 18:03:00 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
 int	ft_str_is_uppercase(char *str)
-{	
+{
 	int	i;
 	int	a;
 
@@ -35,7 +35,7 @@ int	ft_str_is_uppercase(char *str)
 		}
 	}
 	return (a);
-}	
+}
 /*
 int main ()
 {

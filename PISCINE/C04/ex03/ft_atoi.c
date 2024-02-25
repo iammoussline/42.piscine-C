@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 13:09:27 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/21 16:47:58 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/25 18:08:28 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(char *str)
 		result = result * -1;
 	return (result);
 }
-
+/*
 int main(int argc, char **argv) 
 {
     char *str = argv[1];
@@ -46,4 +46,4 @@ int main(int argc, char **argv)
     printf("%d\n", *str);
     return 0;
 }
-
+*/

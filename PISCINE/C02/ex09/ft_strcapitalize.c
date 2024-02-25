@@ -6,61 +6,31 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 20:07:54 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/16 14:09:44 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/25 18:03:33 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-
-int	letters(char c)
-{
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-}
-
-char	to_uppercase(char c)
-{
-	if (c >= 'a' && c <= 'z')
-	{
-		return (c - 32);
-	}
-	return (c);
-}
 
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
-	int		last;
+	int	a;
 
 	i = 0;
-	last = 0 + 1;
 	while (str[i] != '\0')
 	{
-		if (letters(str[i]) && !(letters(last)))
-		{
-			str[i] = to_uppercase(str[i]);
-		}
-		else if (letters(str[i]))
-		{
-			if (!letters(last))
-			{
-				str[i] += 32;
-			}
-		}
-		last = str[i];
+		if ('a' <= str[i - 1] && str[i - 1] <= 'z')
+			a = 1;
+		else if ('0' <= str[i - 1] && str[i - 1] <= '9')
+			a = 1;
+		else if ('A' <= str[i - 1] && str[i - 1] <= 'Z')
+			a = 1;
+		else
+			a = 0;
+		if ('A' <= str[i] && str[i] <= 'Z' && a == 1)
+			str[i] = str[i] + 32;
+		if ('a' <= str[i] && str[i] <= 'z' && a == 0)
+			str[i] = str[i] - 32;
 		i++;
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-
-char *ft_strcapitalize(char *str);
-int letters(char c);
-char to_uppercase(char c);
-
-int main() {
-    char str[] = "43mots hel-lo bg IL est 13h30 AHHHHHHHHH";
-    printf("%s\n", ft_strcapitalize(str));
-    return 0;
-}
-*/

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/19 17:37:26 by rteles            #+#    #+#             */
-/*   Updated: 2021/07/19 17:37:29 by rteles           ###   ########.fr       */
+/*   Created: 2024/02/25 19:41:58 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:42:27 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	sizetotal(int size, char **strs, char *sep)
@@ -72,6 +73,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	s[b] = '\0';
 	return (s);
 }
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -90,3 +92,4 @@ int	main(void)
 
 	printf("%s\n", ft_strjoin(0, text, " | "));
 }
+*/

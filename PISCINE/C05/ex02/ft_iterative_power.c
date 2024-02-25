@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/19 13:54:05 by rteles            #+#    #+#             */
-/*   Updated: 2021/07/19 13:54:07 by rteles           ###   ########.fr       */
+/*   Created: 2024/02/25 19:35:36 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:38:36 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
 int	ft_iterative_power(int nb, int power)
 {

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_sort_in_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 19:36:35 by thinkpad          #+#    #+#             */
-/*   Updated: 2024/02/25 19:36:48 by thinkpad         ###   ########.fr       */
+/*   Created: 2024/02/25 19:29:31 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:29:45 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	long int	o;
+	int	i;
+	int	a;
 
-	o = 1;
-	if (nb == 0)
-		return (0);
-	while (nb > o * o)
-		o++;
-	if (nb == o * o)
-		return (o);
-	else
-		return (0);
+	i = 0;
+	while ((i + 1) < size)
+	{
+		if (tab[i] > tab[i + 1])
+		{
+			a = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = a;
+			i = 0;
+		}
+		else
+			i++;
+	}
 }
-/*#include <stdio.h>
-int main (void)
-{
-	printf("%d\n",ft_sqrt(1));
-}*/

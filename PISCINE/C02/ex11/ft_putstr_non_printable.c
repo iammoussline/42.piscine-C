@@ -1,50 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 19:28:32 by thinkpad          #+#    #+#             */
-/*   Updated: 2024/02/25 19:29:07 by thinkpad         ###   ########.fr       */
+/*   Created: 2024/02/25 19:32:27 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:32:43 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdbool.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+bool	putstr_is_printable(char c)
 {
-	if (nb == -2147483648)
+	return (c >= ' ' && c <= '~');
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int	i;
+	int	c;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-	{
-		ft_putchar(nb + '0');
+		if (putstr_is_printable(str[i]))
+			ft_putchar(str[i]);
+		else
+		{
+			ft_putchar('\\');
+			if (str[i] < 0)
+				c = 256 + str[i];
+			else
+				c = str[i];
+			ft_putchar("0123456789abcdef"[c / 16]);
+			ft_putchar("0123456789abcdef"[c % 16]);
+		}
+		i++;
 	}
 }
-/*
-int main()
-{
-    int number = 2147483649;
-    ft_putnbr(number);
-    return 0;
-}
-*/

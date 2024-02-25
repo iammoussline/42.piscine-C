@@ -6,7 +6,7 @@
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 09:33:04 by mkandemi          #+#    #+#             */
-/*   Updated: 2024/02/12 11:59:29 by mkandemi         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:56:26 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_strlen(char *str)
 	compteur = 0;
 	while (*str != '\0')
 	{
-	str++;
-	compteur++;
+		str++;
+		compteur++;
 	}
 	return (compteur);
 }

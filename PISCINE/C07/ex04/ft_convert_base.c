@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rteles <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 17:12:34 by rteles            #+#    #+#             */
-/*   Updated: 2021/07/20 17:12:35 by rteles           ###   ########.fr       */
+/*   Created: 2024/02/25 19:42:49 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:43:14 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 char	*ft_putnbr_base(int nbr, char *base);
 
 int	digit(char s, char *base)

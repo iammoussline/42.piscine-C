@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jferro <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/20 14:36:04 by jferro            #+#    #+#             */
-/*   Updated: 2021/07/20 21:40:49 by jferro           ###   ########.fr       */
+/*   Created: 2024/02/25 19:40:42 by thinkpad          #+#    #+#             */
+/*   Updated: 2024/02/25 19:44:15 by thinkpad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 
