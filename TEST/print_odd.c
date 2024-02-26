@@ -2,14 +2,17 @@
 
 
 
-char    ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int o;
+	int	compteur;
 
-    o = 0;
-    while (str[o] != '\0')
-        o++;
-    return (o);
+	compteur = 0;
+	while (*str != '\0')
+	{
+		str++;
+		compteur++;
+	}
+	return (compteur);
 }
 
 void    ft_putchar(char c)

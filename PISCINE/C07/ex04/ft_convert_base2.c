@@ -32,7 +32,7 @@ int	sizetotal(long int nb, int size)
 	return (sizearray + 1);
 }
 
-char	*funcao(long int nb, int size, char *base, char *dest)
+char	*ft_fonction(long int nb, int size, char *base, char *dest)
 {
 	int	b;
 	int	sizeindex;
@@ -84,7 +84,7 @@ char	*ft_putnbr_base(int nbr, char *base)
 	p = malloc((sizetotal(nbr, i) + 1) * sizeof(char));
 	if (p == 0)
 		return (0);
-	p = funcao(nbr, i, base, p);
+	p = ft_fonction(nbr, i, base, p);
 	return (p);
 }
 /*#include <stdio.h>

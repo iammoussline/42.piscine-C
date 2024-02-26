@@ -35,7 +35,7 @@ int	sizetotal(int size, char **strs, char *sep)
 	return (length);
 }
 
-int	ft_concatenar(char **dest, char *src, int b)
+int	ft_concat(char **dest, char *src, int b)
 {
 	int	i;
 
@@ -64,10 +64,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	b = 0;
 	while (o < size)
 	{
-		b = ft_concatenar(&s, strs[o], b);
+		b = ft_concat(&s, strs[o], b);
 		if (o == (size - 1))
 			break ;
-		b = ft_concatenar(&s, sep, b);
+		b = ft_concat(&s, sep, b);
 		o++;
 	}
 	s[b] = '\0';
@@ -79,15 +79,15 @@ int	main(void)
 {
 	char *text[10];
 
-	text[0] = "Testando";
+	text[0] = "Test";
 	text[1] = "a";
-	text[2] = "funcao";
+	text[2] = "function";
 	text[3] = "ft_strjoin";
 	text[4] = "com";
 	text[5] = "o";
-	text[6] = "separador";
+	text[6] = "separationr";
 	text[7] = "\' - \'";
-	text[8] = "e tamanho";
+	text[8] = "s alut";
 	text[9] = "10";
 
 	printf("%s\n", ft_strjoin(0, text, " | "));

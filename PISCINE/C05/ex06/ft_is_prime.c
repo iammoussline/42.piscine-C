@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 19:36:56 by thinkpad          #+#    #+#             */
-/*   Updated: 2024/02/25 19:37:10 by thinkpad         ###   ########.fr       */
+/*   Created: 2024/02/25 19:36:56 by mkandemi          #+#    #+#             */
+/*   Updated: 2024/02/26 08:29:33 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ft_is_prime(int nb)
 int main()
 {
 	int i;
-	i = ft_is_prime(2147483647);
+	i = ft_is_prime(15);
 	printf("I: %d\n", i);
-}*/
+}
+*/

@@ -24,7 +24,7 @@ int	digit(char s, char *base)
 	return (n);
 }
 
-int	verificar(char *base)
+int	ft_verification(char *base)
 {
 	int	i;
 	int	o;
@@ -56,7 +56,7 @@ int	ft_atoi_base(char *str, char *base)
 
 	nb = 0;
 	neg = 1;
-	basesize = verificar(base);
+	basesize = ft_verification(base);
 	if (basesize <= 1)
 		return (0);
 	while (*str != 0 && ((*str >= 9 && *str <= 13) || *str == 32))
