@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdbool.h>
 
 void	ft_putchar(char c)
 {
