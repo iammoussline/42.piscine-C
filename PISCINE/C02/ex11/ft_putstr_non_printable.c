@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkandemi <mkandemi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 19:32:27 by thinkpad          #+#    #+#             */
-/*   Updated: 2024/02/25 19:32:43 by thinkpad         ###   ########.fr       */
+/*   Created: 2024/02/25 19:32:27 by mkandemi          #+#    #+#             */
+/*   Updated: 2024/02/25 19:32:43 by mkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -17,7 +18,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-bool	putstr_is_printable(char c)
+char	putstr_is_printable(char c)
 {
 	return (c >= ' ' && c <= '~');
 }
@@ -45,3 +46,15 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
+/*
+int main ()
+{
+	char str[] = "Hello/t World !";
+
+	printf("Chaine bqse : %s\n", str);
+	printf("chaine non printable : ");
+	ft_putstr_non_printable(str);
+	printf("\n");
+	return 0;
+}
+*/
