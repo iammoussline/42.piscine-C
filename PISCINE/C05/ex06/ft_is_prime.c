@@ -23,18 +23,17 @@ int	ft_is_prime(int nb)
 	i = nb / 2;
 	while (o <= i)
 	{
-		if (nb % o == 0 || nb % o == 0)
+		if (nb % o == 0 || nb % i == 0)
 			return (0);
 		o += 2;
 		i -= 2;
 	}
 	return (1);
 }
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
 	int i;
-	i = ft_is_prime(15);
+	i = ft_is_prime(4099);
 	printf("I: %d\n", i);
 }
-*/
