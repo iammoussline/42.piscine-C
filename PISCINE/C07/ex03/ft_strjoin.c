@@ -55,7 +55,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		o;
 	int		b;
 
-	if (size == 0)
+	if (size == 0 || !strs)
 		return (malloc(1));
 	s = malloc((sizetotal(size, strs, sep) + 1) * sizeof(char));
 	if (s == 0)
@@ -73,7 +73,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	s[b] = '\0';
 	return (s);
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
@@ -86,10 +86,10 @@ int	main(void)
 	text[4] = "com";
 	text[5] = "o";
 	text[6] = "separationr";
-	text[7] = "\' - \'";
+	text[7] = "NULL";
 	text[8] = "s alut";
 	text[9] = "10";
 
-	printf("%s\n", ft_strjoin(0, text, " | "));
+	printf("%s\n", ft_strjoin(3, NULL, NULL));
 }
-*/
+
