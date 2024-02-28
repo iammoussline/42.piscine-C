@@ -4,23 +4,26 @@
 
 int longueurChaine(char texte[])
 {
-    int i;
-    i = 0;
-    int compteur = 0;
+    int i = 0;
 
     while(texte[i] != '\0')
     {
         i++;
-        compteur ++;
     }
-    return (compteur);
+    return (i);
 }
 
 int main (int argc, char **argv)
 {
-    (void) argc;
-    char texte[] = argv[1];
-    longueurChaine(texte);
-    printf("La longueur de la chaine est ; %d", longueurChaine(texte));
+    if (argc < 2)
+    {
+        printf("Aucune chaîne fournie en argument.\n");
+        return 1;
+    }
+
+
+    char *texte = argv[1];
+    int longueur = longueurChaine(texte);
+    printf("La longueur de la chaîne est : %d\n", longueur);
     return 0;
 }
