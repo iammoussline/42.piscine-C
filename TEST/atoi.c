@@ -34,7 +34,7 @@
 int main ()
 {
 	int result;
-	char str [50] = "+55";
+	char str [50] = "-55";
 	ft_atoi(str);
 	result = ft_atoi(str);
 	printf("voici %s et %d", str, ft_atoi(str));
