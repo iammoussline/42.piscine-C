@@ -1,41 +1,40 @@
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-
-char ft_putchar(char c)
+char *ft_itoa(int nbr) 
 {
-	write(1, &c, 1);
-}
-
-
-
-
-	char ft_print_reverse(char *str)
-{
-
-	int	i;
-
-	i = 0;
-
-
-	while(str[i])
+	if(nbr == -2147483648)
+		return("-2147483648\0");
+	int n = nbr;
+	int len = 0;
+	if (nbr <= 0)
 	{
-		if(str[i] != '\0')
-		{
-			ft_putchar(str[i]);
-			i++;
-		}
-		i++;
+		len++;
+    	}
+	while (n) 
+	{
+		n /= 10;
+		len++;
 	}
-	return 0;
+	char *result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == NULL) 
+		return NULL;
+	result[len] = '\0';
+	if (nbr == 0)
+	{
+		result[0] = '0';
+		return(result);
+	}
+	if (nbr < 0) 
+	{
+		result[0] = '-';
+		nbr = -nbr;
+	}
+	while (nbr) 
+	{
+		result[--len] = nbr % 10 + '0';
+		nbr /= 10;
+	}
+	return result;
 }
-
-int main ()
-{
-	char str[50] = "ABCDEFGHIJKLMOPKDHDGDFEEG";
-
-		ft_print_reverse(str);
-	return 0;
-}
-
-
 		
