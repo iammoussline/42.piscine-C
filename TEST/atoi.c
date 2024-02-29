@@ -15,4 +15,4 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	return (sign * result);
-}
+} 
