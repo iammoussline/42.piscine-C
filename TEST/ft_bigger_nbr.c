@@ -1,27 +1,33 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int trouvermax(int tableau[], int taille)
+void    ft_putchar_n(char c, int i)
 {
-    int max = tableau[0];
-    for (int i = 0; i < taille; i++)
+    while (i > 0)
     {
-        if(tableau[i] > max)
-        {
-            max = tableau[i];
-        }
+        write(1, &c, 1);
+        --i;
     }
-    return max;
 }
 
-int main ()
+void    repeat_alpha(char *str)
 {
-    int tableau[] = {10, 5, 24, 8 ,17};
-    int taille = sizeof(tableau) /
-    sizeof(tableau[0]);
+    while (*str != '\0')
+    {
+        if (*str >= 'a' && *str <= 'z')
+            ft_putchar_n(*str, *str + 1 - 'a');
+        else if (*str >= 'A' && *str <= 'Z')
+            ft_putchar_n(*str, *str + 1 - 'A');
+        else
+            write(1, str, 1);
+        ++str;
+    }
+}
 
-    int max = trouvermax(tableau, taille);
-
-    printf("Le plus grand nombre est : %d\n", max);
-
-    return 0;
+int main(int ac, char **av)
+{
+    if (ac == 2)
+        repeat_alpha(av[1]);
+    
+    write(1, "\n", 1);
+    return (0);
 }
