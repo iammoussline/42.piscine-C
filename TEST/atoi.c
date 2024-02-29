@@ -1,43 +1,18 @@
-#include <unistd.h>
-#include <stdio.h>
-
-
-	int ft_atoi (char *str)
+int	ft_atoi(char *str)
 {
-	int i;
-	int sign;
-	int result;
+	int result = 0;
+	int sign = 1;
 
-	i = 0;
-	sign = 1;
-	result = 0;
-
-	while (str[i] == ' ')
-		i++;
-
-	if (str[i] == '-')
-	{
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+        	str++;
+	if (*str == '-')
 		sign = -1;
-		i++;
-	}
-	else if (str[i] = '+')
-	       i++;
-
-	while(str[i] >= '0' && str[i] <= '9')
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
-			i++;
+		result = result * 10 + *str - '0';
+		str++;
 	}
-	return sign * result;
-}
-
-int main ()
-{
-	int result;
-	char str [50] = "-55";
-	ft_atoi(str);
-	result = ft_atoi(str);
-	printf("voici %s et %d", str, ft_atoi(str));
-	return 0;
-}
-			
+	return (sign * result);
+} 
