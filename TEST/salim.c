@@ -1,47 +1,98 @@
 #include <unistd.h>
-#include <stdio.h>
+#include <stdlib.h>
 
-void    ft_putchar(char c)
+/**
+  * Print a character
+  * @param c The character to print
+*/
+void ft_putchar(char c)
 {
     write(1, &c, 1);
 }
 
+/**
+  * Get the length of a string
+  * @param str The string to get the length
+  * @return The length of the string
+*/
+int ft_strlen(char *str){
+    int len = 0;
 
-int    ft_strlen(char *str)
-{
-    int count = 0;
-
-    while(*str != '\0')
-    {
-        str++;
-        count++;
+    while(str[len] != '\0'){
+        len++;
     }
-    return (count);
+
+    return len;
 }
 
-char    *ft_reverse_char(char *str)
-{
+/**
+  * Print a string
+  * @param str The string to print
+*/
+void ft_print(char *str){
+  int maxLen = ft_strlen(str);
 
-    int i;
 
-    i = ft_strlen(str) - 1;
-    while (i >= 0)
-    {
-        write(1, (str+i), 1);
-        i--;
-    }
-    ft_putchar('\n');
-    return (str);
+  for(int i = 0; i < maxLen; i++){
+    ft_putchar(str[i]);
+  }
 }
 
+/**
+  * Reverse a string
+  * @param str The string to reverse
+  * @return The reversed string
+*/
+char *ft_reverse_char(char *str){
+  int len = ft_strlen(str);
+
+  // On alloue la memoire pour la string dest
+  // La taille de la string dest est la meme que la string originale + 1 pour le caractere null
+  char *dest = malloc(len + 1);
+
+  for(int i = 0; i < len; i++){
+    // Ici on parcourt la string originale a l'envers et on la met dans la string dest
+    // On met le caractere dans la string dest a la position i
+    dest[i] = str[len - i - 1];
+  }
+
+  // On ajoute le caractere null a la fin de la string dest
+  dest[len] = '\0';
+
+  return dest;
+}
+
+/**
+  * Validate the inputs
+  * @param sizeArgs The size of the arguments
+  * @return 1 if the inputs are valid, 0 otherwise
+*/
+int ft_validate_inputs(int sizeArgs){
+  if(sizeArgs <= 1){
+    ft_print("Please enter a string as argument.\nUsage: ./a.out salim");
+    return 0;
+  }
+
+  if(sizeArgs > 2){
+    ft_print("Please enter only one argument.\nUsage: ./a.out salim");
+    return 0;
+  }
+
+  return 1;
+}
 
 int main (int argc, char **argv)
 {
-    if (argc > 2)
-        return (0);
-    write(1, (argv[1]), ft_strlen(argv[1]));
-    ft_putchar(' ');
-    ft_strlen(argv[1]);
-    ft_reverse_char(argv[1]);
+
+  if(ft_validate_inputs(argc) == 0){
     return 0;
+  }
+
+  char *reversedString = ft_reverse_char(argv[1]);
+
+  ft_print(argv[1]);
+  ft_putchar(' ');
+  ft_print(reversedString);
+
+  return 0;
 }
